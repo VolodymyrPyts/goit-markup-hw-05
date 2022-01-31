@@ -104,6 +104,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .head-nav-list {
@@ -145,6 +146,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--first-color-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .head-nav-link:hover,
@@ -269,10 +271,29 @@ img {
   text-align: center;
   line-height: 1.17;
 }
+
+.topic-card-name {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  text-transform: uppercase;
+  line-height: 1.14;
+  font-weight: 700;
+  text-align: center;
+  color: var(--first-fon-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .topic-work {
   display: flex;
 }
 .topic-list {
+  position: relative;
   margin-right: 30px;
   flex-basis: calc((100% - 60px) / 3);
 }
@@ -350,6 +371,8 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   fill: var(--socset-fill-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon:hover,
@@ -387,6 +410,9 @@ img {
   cursor: pointer;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partner-links:hover,
