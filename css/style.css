@@ -105,7 +105,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-color-text);
-  transition: color var(--time-anime) var(--time-cube);
+  /* transition: color var(--time-anime) var(--time-cube); */
 }
 
 .head-nav-list {
@@ -129,24 +129,12 @@ img {
 .active-page::after {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--secondary-button-color);
-}
-
-.link-email {
-  align-items: center;
-  fill: currentColor;
-  margin-right: 10px;
-}
-
-.link-phon {
-  align-items: center;
-  fill: currentColor;
-  margin-right: 10px;
 }
 
 .head-adress {
@@ -174,6 +162,18 @@ img {
 .head-nav-contact:focus,
 .head-nav-contact:active {
   color: var(--secondary-button-color);
+}
+
+.link-email {
+  align-items: center;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.link-phon {
+  align-items: center;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /*оформлення тіла*/
@@ -290,11 +290,12 @@ img {
 
 .topic-card-name {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   left: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: 70px;
   width: 100%;
 
   text-transform: uppercase;
@@ -638,9 +639,12 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.card-link:hover .descript {
+.card-link:hover .descript,
+.card-link:focus .descript {
   transform: translateX(0);
 }
+
+/* модалка */
 
 .backdrop {
   position: fixed;
@@ -649,6 +653,9 @@ img {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+
+  transition: opacity var(--time-anime) var(--time-cube);
 }
 .backdrop.is-hidden {
   opacity: 0;
