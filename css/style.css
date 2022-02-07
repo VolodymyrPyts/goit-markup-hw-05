@@ -19,7 +19,7 @@
   --border-color: #eeeeee;
   --socset-fill-color: #afb1b8;
   --time-cube: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-anime: 1000ms;
+  --time-anime: 250ms;
 }
 
 body {
@@ -195,9 +195,6 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.main-hero {
 }
 
 .heading-text {
